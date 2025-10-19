@@ -1,13 +1,13 @@
 using System.Collections.Generic;
+using System.Timers;
 
 namespace StateMachine.Infrastructure
 {    
     public interface IState<T> where T : IComponent
     {
-        public List<IAction<T>> EntryActions { get; }
-        public List<IAction<T>> ExitActions { get; }
-        
         public void Begin(T component);
+        public void UpdateState(T component, float deltaTime);
+        public void FixedUpdateState(T component, float fixedDeltaTime);
         public void End(T component);
     }
 }

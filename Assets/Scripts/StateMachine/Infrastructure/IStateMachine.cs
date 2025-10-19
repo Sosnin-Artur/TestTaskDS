@@ -5,6 +5,6 @@ namespace StateMachine.Infrastructure
         public IState<T> InitialState { get; }
         public IState<T> EmptyState { get; }
 
-        public IState<T> CheckTransitions(IState<T> stateComponent, IState<T> currentState);
+        public IState<T> CheckTransitions(T stateComponent, IState<T> currentState);
     }
 }
