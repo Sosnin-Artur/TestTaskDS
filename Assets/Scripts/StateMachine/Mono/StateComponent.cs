@@ -53,6 +53,7 @@ namespace StateMachine.Mono
         public void CheckTransitions()
         {
             var nextState = _stateMachine.CheckTransitions(this, _currentState);
+            
             if (nextState != _stateMachine.EmptyState)
             {
                 _currentState.End(this);
