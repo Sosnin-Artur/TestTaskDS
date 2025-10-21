@@ -15,7 +15,7 @@ namespace StateMachine.Mono
 
         private void Start()
         {
-            if (_stateMachine.InitialState != null)
+            if (_stateMachine.InitialState == null)
             {
                 Debug.LogError($"{_stateMachine.name} has no initial state attached to it.", this);
                 return;
@@ -65,7 +65,7 @@ namespace StateMachine.Mono
 
         private bool CheckExistence()
         {
-            return _currentState != null;
+            return _currentState == null;
         }
     }
 }

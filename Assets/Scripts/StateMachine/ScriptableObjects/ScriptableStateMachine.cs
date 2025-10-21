@@ -14,7 +14,7 @@ namespace StateMachine.ScriptableObjects
         [SerializeField] private List<ScriptableTransition> _transitions;
 
         public IState<StateComponent> InitialState { get => _initialState; }
-        public  IState<StateComponent> EmptyState { get => _emptyState; }
+        public IState<StateComponent> EmptyState { get => _emptyState; }
 
         public IState<StateComponent> CheckTransitions(StateComponent stateComponent
             , IState<StateComponent> currentState)
@@ -36,6 +36,7 @@ namespace StateMachine.ScriptableObjects
                     }
                 }
             }
+            
             return _emptyState;
         }
 
@@ -44,37 +45,30 @@ namespace StateMachine.ScriptableObjects
         {
             if (transition.Condition.Verify(stateComponent))
             {
-                if (transition.TrueState != _emptyState)
+                if (transition.TrueState != null)
                 {
-                    if (transition.TrueState != null)
-                    {
-                        transitionState = transition.TrueState;
-                        return true;
-                    }
-                    else
-                    {
-                        Debug.LogError($"{name} Transitions list has an element with a null true state", this);
-                    }
+                    transitionState = transition.TrueState;
+                        
+                    return true;
+                }
+                else
+                {
+                    throw new Exception($"{name} Transitions list has an element with a null true state");
                 }
             }
             else
             {
-                if (transition.FalseState != _emptyState)
+                if (transition.FalseState != null)
                 {
-                    if (transition.FalseState != null)
-                    {
-                        transitionState = transition.FalseState;
-                        return true;
-                    }
-                    else
-                    {
-                        Debug.LogError($"{name} Transitions list has an element with a null false state", this);
-                    }
+                    transitionState = transition.FalseState;
+                        
+                    return true;
+                }
+                else
+                {
+                    throw new Exception($"{name} Transitions list has an element with a null false state");
                 }
             }
-
-            throw new Exception($"Cannot transit in {stateComponent} from {transition.OriginState}");
-            return false;
         }
     }
 }
