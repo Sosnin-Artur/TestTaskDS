@@ -25,10 +25,9 @@ namespace StateMachine.ScriptableObjects
                 {
                     if (transition.Condition != null)
                     {
-                        if (VerifyCondition(stateComponent, transition, out var transitionTrueState))
-                        {
-                            return transitionTrueState;
-                        }
+                        VerifyCondition(stateComponent, transition, out var transitionTrueState);
+                        
+                        return transitionTrueState;
                     }
                     else
                     {

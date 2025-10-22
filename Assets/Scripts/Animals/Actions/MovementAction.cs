@@ -1,19 +1,24 @@
 using System;
 using System.Collections.Generic;
 using Animals.Interfaces;
+using StateMachine.Infrastructure;
 using StateMachine.Mono;
 using StateMachine.ScriptableObjects;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 namespace Animals.Actions
 {
-    [CreateAssetMenu(menuName = "Scriptable State Machine/Actions/MovementAction", fileName = "new MovementAction")]
-    public class MovementAction : ScriptableAction
+    public abstract class MovementAction : ScriptableAction, IDirectable
     {
         [SerializeField] private float _speed;
         
         private Dictionary<StateComponent, IMovable> _movables = new();
-            
+
+        public float Speed => _speed;
+
+        public Dictionary<StateComponent, IMovable> Movables => _movables;
+
         private void OnEnable()
         {
             _movables.Clear();
@@ -38,7 +43,10 @@ namespace Animals.Actions
                 _movables[statesComponent] = movable;
             }
             
-            movable.Move(_speed);  
+            var direction = MakeDirectioin(statesComponent);
+            movable.Move(_speed, direction);  
         }
+
+        public abstract Vector3 MakeDirectioin(StateComponent component);
     }
 }
