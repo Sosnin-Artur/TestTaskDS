@@ -18,6 +18,7 @@ namespace Zoo.Editor
         static void EnsureSubscribed()
         {
             if (subscribed) return;
+            
             SceneView.duringSceneGui += OnSceneGUI;
             subscribed = true;
         }
@@ -28,7 +29,7 @@ namespace Zoo.Editor
 
             Handles.zTest = UnityEngine.Rendering.CompareFunction.LessEqual;
 
-            string[] guids = AssetDatabase.FindAssets("t:BorderCrossingCondition");
+            var guids = AssetDatabase.FindAssets("t:BorderCrossingCondition");
             foreach (string guid in guids)
             {
                 var path = AssetDatabase.GUIDToAssetPath(guid);
@@ -38,8 +39,8 @@ namespace Zoo.Editor
 
                 Handles.color = Color.red;
 
-                Vector3 half = new Vector3(data.Size.x / 2, 0, data.Size.z / 2);
-                Vector3 c = data.Center;
+                var half = new Vector3(data.Size.x / 2, 0, data.Size.z / 2);
+                var c = data.Center;
 
                 Vector3[] verts =
                 {
