@@ -1,0 +1,16 @@
+{
+    "name": "Animals",
+    "rootNamespace": "",
+    "references": [
+        "GUID:b4eaf54ac66cfef4d941cb274dcf66ca"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
