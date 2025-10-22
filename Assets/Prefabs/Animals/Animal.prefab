@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 5622185061968901724}
   - component: {fileID: 9160128543533833497}
   - component: {fileID: 4657886830095017530}
-  - component: {fileID: 3625816558334842741}
   - component: {fileID: 7897531002649716837}
   - component: {fileID: 2746467348706049673}
+  - component: {fileID: 7598684778244898739}
   m_Layer: 0
   m_Name: Animal
   m_TagString: Untagged
@@ -111,19 +111,6 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &3625816558334842741
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1150926813618556335}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 116de10d62ef401fa902a8451cd8c526, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _stateMachine: {fileID: 11400000, guid: 5fc4b3b51828e0a4fac4aee00ff86363, type: 2}
 --- !u!54 &7897531002649716837
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -164,3 +151,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _rigidbody: {fileID: 7897531002649716837}
+--- !u!114 &7598684778244898739
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1150926813618556335}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6badabee43a89954dae9f8b18e599bb9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _stateMachine: {fileID: 11400000, guid: 5fc4b3b51828e0a4fac4aee00ff86363, type: 2}
