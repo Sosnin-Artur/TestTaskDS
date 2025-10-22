@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: AnimalStateMachine
   m_EditorClassIdentifier: 
   _initialState: {fileID: 11400000, guid: be07e2a475163dd44b3985b8a0994e64, type: 2}
-  _emptyState: {fileID: 11400000, guid: be07e2a475163dd44b3985b8a0994e64, type: 2}
+  _emptyState: {fileID: 11400000, guid: 8ae2e2d1d40a42b40853a5e107c71eea, type: 2}
   _transitions:
-  - {fileID: 11400000, guid: 3d700c9225b5db3449e60a42f9d61972, type: 2}
+  - {fileID: 11400000, guid: 5864a4a0afa42e2449b36d6243a5fc5c, type: 2}
+  - {fileID: 11400000, guid: 45344357e60a03240856e443e2389d4d, type: 2}

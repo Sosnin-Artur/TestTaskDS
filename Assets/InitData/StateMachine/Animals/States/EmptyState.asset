@@ -9,8 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 44770ca4104a4923923e1b01485baa45, type: 3}
-  m_Name: BorderCrossingCondition
+  m_Script: {fileID: 11500000, guid: b5ad62deeb8143688aebea81518bf082, type: 3}
+  m_Name: EmptyState
   m_EditorClassIdentifier: 
-  _center: {x: 0, y: 0, z: 0}
-  _size: {x: 10, y: 10, z: 10}
+  _entryActions: []
+  _exitActions: []
+  _physicsActions: []
+  _updateActions: []
