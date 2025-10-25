@@ -666,6 +666,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PreySpawner
       objectReference: {fileID: 0}
+    - target: {fileID: 776844253785481586, guid: 971d921091c27594ab8ec97cb2541146, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1289469292208135760, guid: 971d921091c27594ab8ec97cb2541146, type: 3}
       propertyPath: _prefab
       value: 
