@@ -8,8 +8,8 @@ namespace StateMachine.Mono
     public class StateComponent : MonoBehaviour, IComponent
     {
         [SerializeField] private ScriptableStateMachine _stateMachine;
-        
-        private IState<StateComponent> _currentState;
+        [SerializeField]
+        private ScriptableState _currentState;
 
         public IState<StateComponent> CurrentState { get => _currentState; }
 
@@ -26,7 +26,7 @@ namespace StateMachine.Mono
                 return;
             }
 
-            _currentState = _stateMachine.InitialState;
+            _currentState = (ScriptableState)_stateMachine.InitialState;
             _currentState.Begin(this);
         }
 
@@ -63,7 +63,7 @@ namespace StateMachine.Mono
             {
                 _currentState.End(this);
                 var previousState = CurrentState;
-                _currentState = nextState;
+                _currentState = (ScriptableState)nextState;
                 _currentState.Begin(this);
 
             }

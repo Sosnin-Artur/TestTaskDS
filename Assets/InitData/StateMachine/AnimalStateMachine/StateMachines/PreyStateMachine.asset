@@ -15,12 +15,12 @@ MonoBehaviour:
   _initialState: {fileID: 11400000, guid: be07e2a475163dd44b3985b8a0994e64, type: 2}
   _emptyState: {fileID: 11400000, guid: 8ae2e2d1d40a42b40853a5e107c71eea, type: 2}
   _transitions:
-  - {fileID: 11400000, guid: 5864a4a0afa42e2449b36d6243a5fc5c, type: 2}
-  - {fileID: 11400000, guid: 45344357e60a03240856e443e2389d4d, type: 2}
-  - {fileID: 11400000, guid: 59f7b244f8bd33c45af6ee3ae3f3e305, type: 2}
   - {fileID: 11400000, guid: 54f34f9f4af691843be1eff86bf23ad6, type: 2}
   - {fileID: 11400000, guid: 9c80e0b2e8f16ad40b31c0c88eeb7bac, type: 2}
+  - {fileID: 11400000, guid: 7b53dec844d1aaf46aaba54806ce3e89, type: 2}
   - {fileID: 11400000, guid: 9f8be8d8a0e376a44b95343c7b148d45, type: 2}
+  - {fileID: 11400000, guid: 5864a4a0afa42e2449b36d6243a5fc5c, type: 2}
+  - {fileID: 11400000, guid: 59f7b244f8bd33c45af6ee3ae3f3e305, type: 2}
   - {fileID: 11400000, guid: aa202dce9b8b7134bb4173d1d727f5f5, type: 2}
   - {fileID: 11400000, guid: 696ca62643e442842b7861af1edca279, type: 2}
   - {fileID: 11400000, guid: cd83881c0f3183e42bd126fa655efbf8, type: 2}

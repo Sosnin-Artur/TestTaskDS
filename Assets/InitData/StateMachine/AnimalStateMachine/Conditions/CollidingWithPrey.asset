@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2cd3b0b7d0e88704a870605b1bab4638, type: 3}
   m_Name: CollidingWithPrey
   m_EditorClassIdentifier: 
-  _radious: 0.5
+  _radius: 0.55
   _hitMask:
     serializedVersion: 2
     m_Bits: 128

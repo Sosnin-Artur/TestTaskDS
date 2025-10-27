@@ -15,7 +15,7 @@ namespace Animals.Conditions
             var transform = statesComponent.transform;
             var hits = Physics.OverlapSphere(transform.position, _radius, _hitMask, QueryTriggerInteraction.Collide);
             
-            var state = (hits.Length - 1) > 0;
+            var state = (hits.Length) > 0;
 
             return state;
         }

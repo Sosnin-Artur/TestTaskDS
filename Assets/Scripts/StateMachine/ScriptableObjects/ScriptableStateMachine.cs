@@ -35,7 +35,7 @@ namespace StateMachine.ScriptableObjects
                                 }
                                 else
                                 {
-                                    Debug.LogError($"[SCRIPTABLE STATE MACHINE] {name}'s Transitions list has an element with a null true state", this);
+                                    Debug.LogError($"{name}'s Transitions list has an element with a null true state", this);
                                 }
                             }
                         }
@@ -49,49 +49,19 @@ namespace StateMachine.ScriptableObjects
                                 }
                                 else
                                 {
-                                    Debug.LogError($"[SCRIPTABLE STATE MACHINE] {name}'s Transitions list has an element with a null false state", this);
+                                    Debug.LogError($"{name}'s Transitions list has an element with a null false state", this);
                                 }
                             }
                         }
                     }
                     else
                     {
-                        Debug.LogError($"[SCRIPTABLE STATE MACHINE] {name}'s Transitions list has an element with a null Condition", this);
+                        Debug.LogError($"{name}'s Transitions list has an element with a null Condition", this);
                     }
                 }
             }
             return _emptyState;
         }
 
-        private bool VerifyCondition(StateComponent stateComponent, ScriptableTransition transition,
-            out IState<StateComponent> transitionState)
-        {
-            if (transition.Condition.Verify(stateComponent))
-            {
-                if (transition.TrueState != null)
-                {
-                    transitionState = transition.TrueState;
-                        
-                    return true;
-                }
-                else
-                {
-                    throw new Exception($"{name} Transitions list has an element with a null true state");
-                }
-            }
-            else
-            {
-                if (transition.FalseState != null)
-                {
-                    transitionState = transition.FalseState;
-                        
-                    return true;
-                }
-                else
-                {
-                    throw new Exception($"{name} Transitions list has an element with a null false state");
-                }
-            }
-        }
     }
 }
