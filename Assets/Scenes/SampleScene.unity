@@ -609,6 +609,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PredatorSpawner
       objectReference: {fileID: 0}
+    - target: {fileID: 1742205570120491055, guid: e1a0d3dba39546044a1ec648941ba1c0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4882230808369574339, guid: e1a0d3dba39546044a1ec648941ba1c0, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

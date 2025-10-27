@@ -19,26 +19,47 @@ namespace StateMachine.ScriptableObjects
         public IState<StateComponent> CheckTransitions(StateComponent stateComponent
             , IState<StateComponent> currentState)
         {
-            foreach (var transition in _transitions)
+            foreach (ITransition<StateComponent> transition in _transitions)
             {
                 if (transition.OriginState == currentState)
                 {
                     if (transition.Condition != null)
                     {
-                        VerifyCondition(stateComponent, transition, out var transitionState);
-
-                        if (transitionState != EmptyState)
+                        if (transition.Condition.Verify(stateComponent))
                         {
-                            return transitionState;
+                            if (transition.TrueState != _emptyState)
+                            {
+                                if (transition.TrueState != null)
+                                {
+                                    return transition.TrueState;
+                                }
+                                else
+                                {
+                                    Debug.LogError($"[SCRIPTABLE STATE MACHINE] {name}'s Transitions list has an element with a null true state", this);
+                                }
+                            }
+                        }
+                        else
+                        {
+                            if (transition.FalseState != _emptyState)
+                            {
+                                if (transition.FalseState != null)
+                                {
+                                    return transition.FalseState;
+                                }
+                                else
+                                {
+                                    Debug.LogError($"[SCRIPTABLE STATE MACHINE] {name}'s Transitions list has an element with a null false state", this);
+                                }
+                            }
                         }
                     }
                     else
                     {
-                        Debug.LogError($"{name} Transitions list has an element with a null condition", this);
+                        Debug.LogError($"[SCRIPTABLE STATE MACHINE] {name}'s Transitions list has an element with a null Condition", this);
                     }
                 }
             }
-            
             return _emptyState;
         }
 

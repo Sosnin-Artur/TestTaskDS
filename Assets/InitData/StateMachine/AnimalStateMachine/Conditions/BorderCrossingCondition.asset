@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: BorderCrossingCondition
   m_EditorClassIdentifier: 
   _center: {x: 0, y: 0, z: 0}
-  _size: {x: 10, y: 10, z: 10}
+  _size: {x: 30, y: 30, z: 30}
