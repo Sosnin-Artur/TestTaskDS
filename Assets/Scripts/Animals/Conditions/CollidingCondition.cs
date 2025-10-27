@@ -1,5 +1,7 @@
+using Extensions;
 using StateMachine.Mono;
 using StateMachine.ScriptableObjects;
+using System;
 using UnityEngine;
 
 namespace Animals.Conditions
@@ -15,7 +17,7 @@ namespace Animals.Conditions
             var transform = statesComponent.transform;
             var hits = Physics.OverlapSphere(transform.position, _radius, _hitMask, QueryTriggerInteraction.Collide);
             
-            var state = (hits.Length) > 0;
+            var state = (hits.Length - Convert.ToByte(_hitMask.Contains(statesComponent.gameObject.layer))) > 0;
 
             return state;
         }
