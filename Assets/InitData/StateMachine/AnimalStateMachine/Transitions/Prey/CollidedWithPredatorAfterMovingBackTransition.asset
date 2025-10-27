@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17cb64d854ed48fe8abc2f787687cae1, type: 3}
+  m_Name: CollidedWithPredatorAfterMovingBackTransition
+  m_EditorClassIdentifier: 
+  _originState: {fileID: 11400000, guid: b3166688f70fa7b45b41a6f219addb58, type: 2}
+  _condition: {fileID: 11400000, guid: 97a4975baab6b904187e412d71df5bcc, type: 2}
+  _trueState: {fileID: 11400000, guid: 297959c9b2fd60842ae7b8e2a4a24f40, type: 2}
+  _falseState: {fileID: 11400000, guid: 8ae2e2d1d40a42b40853a5e107c71eea, type: 2}

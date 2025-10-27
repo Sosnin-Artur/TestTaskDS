@@ -19,6 +19,7 @@ namespace Animals.Components
         {
             _pool = pool;
             _transform.position = position;
+            Init();
         }
 
         public void OnDespawned()

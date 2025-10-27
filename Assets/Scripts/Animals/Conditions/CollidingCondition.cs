@@ -17,6 +17,10 @@ namespace Animals.Conditions
             
             var state = (hits.Length - 1) > 0;
 
+            if (state)
+            {
+                Debug.Log("test");
+            }
             return state;
         }
     }

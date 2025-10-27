@@ -9,9 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8d4a62ac68dbd3f4cabc4ca9fcdfab6b, type: 3}
-  m_Name: InitData
+  m_Script: {fileID: 11500000, guid: b5ad62deeb8143688aebea81518bf082, type: 3}
+  m_Name: MoveBackState
   m_EditorClassIdentifier: 
-  _minCooldown: 1
-  _maxCooldown: 2
-  _spawnRadious: 20
+  _entryActions:
+  - {fileID: 11400000, guid: 0752bb7d2ca9f44438d987c054526c1a, type: 2}
+  _exitActions: []
+  _physicsActions: []
+  _updateActions: []

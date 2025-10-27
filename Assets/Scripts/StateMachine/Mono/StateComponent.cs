@@ -15,6 +15,11 @@ namespace StateMachine.Mono
 
         private void Start()
         {
+            Init();
+        }
+
+        protected void Init()
+        {
             if (_stateMachine.InitialState == null)
             {
                 Debug.LogError($"{_stateMachine.name} has no initial state attached to it.", this);
