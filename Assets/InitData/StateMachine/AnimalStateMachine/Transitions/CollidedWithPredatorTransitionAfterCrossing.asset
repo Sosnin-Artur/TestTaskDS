@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17cb64d854ed48fe8abc2f787687cae1, type: 3}
   m_Name: CollidedWithPredatorTransitionAfterCrossing
   m_EditorClassIdentifier: 
-  _originState: {fileID: 11400000, guid: 8ae2e2d1d40a42b40853a5e107c71eea, type: 2}
+  _originState: {fileID: 11400000, guid: c0ee8b746697ec343a48dfa1f21a9135, type: 2}
   _condition: {fileID: 11400000, guid: 97a4975baab6b904187e412d71df5bcc, type: 2}
   _trueState: {fileID: 11400000, guid: be07e2a475163dd44b3985b8a0994e64, type: 2}
   _falseState: {fileID: 11400000, guid: 8ae2e2d1d40a42b40853a5e107c71eea, type: 2}
