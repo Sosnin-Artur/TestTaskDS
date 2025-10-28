@@ -17,13 +17,13 @@ A well-structured Unity project demonstrating advanced architectural patterns an
 
 ### 3. Project Structure
 ```
-├── Animals/           # Animal-related components and behaviors
-├── Editor/            # Editor scripts
-├── UI/                # User interface elements and controllers
-├── StateMachine/      # State management system
-├── Extensions/        # Extension methods and utilities
-├── Tests/             # Unit and integration tests
-└── InitData/          # Configuration for game modules deu to scriptable objects
+├── Scripts/Animals/           # Animal-related components and behaviors
+├── Editor/                    # Editor scripts
+├── Scripts/UI/                # User interface elements and controllers
+├── Scripts/StateMachine/      # State management system
+├── Scripts/Extensions/        # Extension methods and utilities
+├── Tests/                     # Unit and integration tests
+└── InitData/                  # Configuration for game modules deu to scriptable objects
 ```
 
 ### 4. Design Patterns
