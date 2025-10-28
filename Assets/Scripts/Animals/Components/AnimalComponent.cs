@@ -1,5 +1,6 @@
 ﻿using Animals.Interfaces;
 using StateMachine.Mono;
+using System;
 using UnityEngine;
 using Zenject;
 
@@ -7,6 +8,7 @@ namespace Animals.Components
 {
     public class AnimalComponent : StateComponent, IPoolable<Vector3, IMemoryPool>, IDespawnable
     {
+        public event Action<IDespawnable> DespawnedEvent;
         private IMemoryPool _pool;
         private Transform _transform;
 
@@ -30,6 +32,7 @@ namespace Animals.Components
         public void Despawn()
         {
             _pool.Despawn(this);
+            DespawnedEvent?.Invoke(this);
         }
 
         public class Factory : PlaceholderFactory<Vector3, AnimalComponent>

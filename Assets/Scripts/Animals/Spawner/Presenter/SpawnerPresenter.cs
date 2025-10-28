@@ -1,4 +1,5 @@
 using Animals.Components;
+using Animals.Interfaces;
 using Animals.Spawner.Model;
 using Animals.Spawner.View;
 using Cysharp.Threading.Tasks;
@@ -39,7 +40,18 @@ namespace Animals.Spawner.Presenter
         private void Spawn()
         {
             var position = Random.insideUnitCircle;
-            _data.SpawnedComponents.Add(_factory.Create(new Vector3(position.x, 0, position.y) * Random.Range(0, _data.SpawnRadious)));
+            var component = _factory.Create(new Vector3(position.x, 0, position.y) * Random.Range(0, _data.SpawnRadious));
+            _data.SpawnedComponents.Add(component);
+
+            component.DespawnedEvent += OnDespawned;
+        }
+
+        private void OnDespawned(IDespawnable despawnable)
+        {
+            despawnable.DespawnedEvent -= OnDespawned;
+            _data.SpawnedComponents.Remove(despawnable);
+            _data.DespawnedComponents.Add(despawnable);
+            _view.SetUp(_data);
         }
     }
 }
