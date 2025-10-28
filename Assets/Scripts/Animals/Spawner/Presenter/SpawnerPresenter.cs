@@ -37,7 +37,7 @@ namespace Animals.Spawner.Presenter
             }
         }
 
-        private void Spawn()
+        public void Spawn()
         {
             var position = Random.insideUnitCircle;
             var component = _factory.Create(new Vector3(position.x, 0, position.y) * Random.Range(0, _data.SpawnRadious));
