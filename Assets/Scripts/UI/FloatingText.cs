@@ -41,7 +41,6 @@ namespace UI
 
             _sequence.Join(transform.DOMove(transform.position + _moveBy, _duration).SetEase(_moveEase));
             _sequence.Join(transform.DOScale(_endScale, _duration * 0.6f).SetEase(_scaleEase));
-            _sequence.Join(_text.DOFade(0f, _duration).SetEase(Ease.Linear).SetDelay(_duration * 0.1f));
 
             _sequence.OnComplete(() => _pool.Despawn(this));
         }
