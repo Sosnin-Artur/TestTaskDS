@@ -1,13 +1,10 @@
-using System.Collections;
-using Animals.Components;
 using Animals.Spawner.Model;
 using Animals.Spawner.Presenter;
 using Animals.Spawner.View;
 using NSubstitute;
 using NUnit.Framework;
+using System.Collections.ObjectModel;
 using UnityEngine;
-using UnityEngine.TestTools;
-using Zenject;
 
 public class SpawningTests
 {
@@ -17,8 +14,8 @@ public class SpawningTests
         var model = Substitute.For<ISpawnerData>();
         var view = Substitute.For<ISpawnerView>();
 
-        var spawned = new System.Collections.ObjectModel.ObservableCollection<Animals.Interfaces.IDespawnable>();
-        var despawned = new System.Collections.ObjectModel.ObservableCollection<Animals.Interfaces.IDespawnable>();
+        var spawned = new ObservableCollection<Animals.Interfaces.IDespawnable>();
+        var despawned = new ObservableCollection<Animals.Interfaces.IDespawnable>();
         model.SpawnedComponents.Returns(spawned);
         model.DespawnedComponents.Returns(despawned);
         model.SpawnRadious.Returns(1f);

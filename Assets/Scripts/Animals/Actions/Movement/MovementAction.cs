@@ -1,17 +1,15 @@
-using System;
 using System.Collections.Generic;
 using Animals.Interfaces;
-using StateMachine.Infrastructure;
 using StateMachine.Mono;
 using StateMachine.ScriptableObjects;
 using UnityEngine;
-using Random = UnityEngine.Random;
 
 namespace Animals.Actions
 {
     public abstract class MovementAction : ScriptableAction, IDirectable
     {
-        [SerializeField] private float _speed;
+        [SerializeField] 
+        private float _speed;
         
         private Dictionary<StateComponent, IMovable> _movables = new();
 

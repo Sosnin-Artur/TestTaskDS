@@ -1,5 +1,3 @@
-using System.Collections.Generic;
-using Animals.Interfaces;
 using StateMachine.Mono;
 using StateMachine.ScriptableObjects;
 using UI;

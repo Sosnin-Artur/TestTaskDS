@@ -1,5 +1,3 @@
-using System.Collections.Generic;
-using System.Linq;
 using StateMachine.Infrastructure;
 using StateMachine.Mono;
 using UnityEngine;
@@ -9,10 +7,14 @@ namespace StateMachine.ScriptableObjects
     [CreateAssetMenu(menuName = "Scriptable State Machine/State", fileName = "State")]
     public class ScriptableState : ScriptableObject, IState<StateComponent>
     {
-        [SerializeField] ScriptableAction[] _entryActions;
-        [SerializeField] ScriptableAction[] _exitActions;
-        [SerializeField] ScriptableAction[] _physicsActions; //to be run in fixed update
-        [SerializeField] ScriptableAction[] _updateActions; //to be run in update
+        [SerializeField] 
+        private ScriptableAction[] _entryActions;
+        [SerializeField]
+        private ScriptableAction[] _exitActions;
+        [SerializeField]
+        private ScriptableAction[] _physicsActions; //to be run in fixed update
+        [SerializeField]
+        private ScriptableAction[] _updateActions; //to be run in update
 
         public void Begin(StateComponent stateComponent)
         {

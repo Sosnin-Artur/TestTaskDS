@@ -1,9 +1,6 @@
-﻿using Animals.Components;
-using Animals.Interfaces;
+﻿using Animals.Interfaces;
 using System;
 using System.Collections.ObjectModel;
-using UnityEngine;
-using Zenject;
 
 namespace Animals.Spawner.Model
 {
@@ -16,13 +13,13 @@ namespace Animals.Spawner.Model
 
         private readonly ObservableCollection<IDespawnable> _spawnedComponents;
         private readonly ObservableCollection<IDespawnable> _despawnedComponents;
+
         public ObservableCollection<IDespawnable> SpawnedComponents => _spawnedComponents;
         public ObservableCollection<IDespawnable> DespawnedComponents => _despawnedComponents;
 
         public float MinCooldown => _minCooldown;
         public float MaxCooldown => _maxCooldown;
         public float SpawnRadious => _spawnRadious;
-
 
         public SpawnerData(ISpawnerInitData initData)
         {

@@ -1,4 +1,3 @@
-using System;
 using StateMachine.Infrastructure;
 using StateMachine.ScriptableObjects;
 using UnityEngine;
@@ -7,7 +6,8 @@ namespace StateMachine.Mono
 {
     public class StateComponent : MonoBehaviour, IComponent
     {
-        [SerializeField] private ScriptableStateMachine _stateMachine;
+        [SerializeField] 
+        private ScriptableStateMachine _stateMachine;
         [SerializeField]
         private ScriptableState _currentState;
 
@@ -23,6 +23,7 @@ namespace StateMachine.Mono
             if (_stateMachine.InitialState == null)
             {
                 Debug.LogError($"{_stateMachine.name} has no initial state attached to it.", this);
+
                 return;
             }
 
@@ -65,7 +66,6 @@ namespace StateMachine.Mono
                 var previousState = CurrentState;
                 _currentState = (ScriptableState)nextState;
                 _currentState.Begin(this);
-
             }
         }
 

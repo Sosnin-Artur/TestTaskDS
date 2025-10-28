@@ -1,5 +1,4 @@
-﻿using Animals.Components;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace Animals.Spawner.Model
 {

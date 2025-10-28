@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using StateMachine.Infrastructure;
 using StateMachine.Mono;
@@ -9,9 +8,12 @@ namespace StateMachine.ScriptableObjects
      [CreateAssetMenu(menuName = "Scriptable State Machine/State Machine", fileName = "State Machine")]
     public class ScriptableStateMachine : ScriptableObject, IStateMachine<StateComponent>   
     {
-        [SerializeField] private ScriptableState _initialState;
-        [SerializeField] private ScriptableState _emptyState;
-        [SerializeField] private List<ScriptableTransition> _transitions;
+        [SerializeField] 
+        private ScriptableState _initialState;
+        [SerializeField] 
+        private ScriptableState _emptyState;
+        [SerializeField] 
+        private List<ScriptableTransition> _transitions;
 
         public IState<StateComponent> InitialState { get => _initialState; }
         public IState<StateComponent> EmptyState { get => _emptyState; }

@@ -1,6 +1,3 @@
-using System.Collections.Generic;
-using System.Timers;
-
 namespace StateMachine.Infrastructure
 {    
     public interface IState<T> where T : IComponent

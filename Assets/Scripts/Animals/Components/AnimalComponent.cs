@@ -9,6 +9,7 @@ namespace Animals.Components
     public class AnimalComponent : StateComponent, IPoolable<Vector3, IMemoryPool>, IDespawnable
     {
         public event Action<IDespawnable> DespawnedEvent;
+
         private IMemoryPool _pool;
         private Transform _transform;
 

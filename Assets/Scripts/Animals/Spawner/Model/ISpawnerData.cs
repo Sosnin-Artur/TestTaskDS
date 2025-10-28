@@ -1,7 +1,5 @@
 ﻿using Animals.Interfaces;
 using System.Collections.ObjectModel;
-using UnityEngine;
-using Zenject;
 
 namespace Animals.Spawner.Model
 {

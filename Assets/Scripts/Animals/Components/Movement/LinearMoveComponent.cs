@@ -1,4 +1,3 @@
-using Animals.Interfaces;
 using UnityEngine;
 
 namespace Animals.Components.Movement

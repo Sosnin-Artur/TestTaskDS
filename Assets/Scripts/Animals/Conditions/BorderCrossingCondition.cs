@@ -7,8 +7,10 @@ namespace Animals.Conditions
     [CreateAssetMenu(menuName = "Scriptable State Machine/Conditions/BorderCrossingCondition", fileName = "new BorderCrossingCondition")]
     public class BorderCrossingCondition : ScriptableCondition
     {
-        [SerializeField] private Vector3 _center;
-        [SerializeField] private Vector3 _size;
+        [SerializeField] 
+        private Vector3 _center;
+        [SerializeField] 
+        private Vector3 _size;
 
         public Vector3 Center => _center;
         public Vector3 Size => _size;
