@@ -2,7 +2,7 @@
 
 A well-structured Unity project demonstrating advanced architectural patterns and clean code practices.
 
-## 🌟 Key Features & Advantages
+## Key Features & Advantages
 
 ### 1. Advanced Architecture
 - **MVP Pattern Implementation**: Clear separation of concerns between Models, Views, and Presenters
@@ -23,6 +23,7 @@ A well-structured Unity project demonstrating advanced architectural patterns an
 ├── StateMachine/      # State management system
 ├── Extensions/        # Extension methods and utilities
 └── Tests/             # Unit and integration tests
+└── InitData/          # Configuration for game modules deu to scriptable objects
 ```
 
 ### 4. Design Patterns
@@ -42,11 +43,6 @@ A well-structured Unity project demonstrating advanced architectural patterns an
   - Improved maintainability
   - Enhanced testability
 
-### 5. Testing
-- Comprehensive test coverage using NUnit
-- Integration tests for key components
-- Test framework setup with Zenject test utilities
-
 ## Technologies Used
 
 - Unity Engine
@@ -56,14 +52,6 @@ A well-structured Unity project demonstrating advanced architectural patterns an
 - Unity Input System
 - UniTask
 - R3
-
-## Testing
-
-The project includes a comprehensive testing suite:
-- Unit tests for core functionality
-- Integration tests for component interaction
-- State machine behavior tests
-- UI interaction tests
 
 ## Best Practices
 
@@ -86,3 +74,7 @@ The project includes a comprehensive testing suite:
 - More sophisticated AI patterns
 - Extended test coverage
 - Performance optimizations
+
+![](ZooGameplay.gif)
+
+P.S. Snakes are red, frogs are green. Frogs could jump very hight but snakes eats them when collides
