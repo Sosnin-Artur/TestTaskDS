@@ -1,5 +1,4 @@
-﻿using Animals.Components;
-using UnityEditor;
+﻿using UnityEditor;
 using UnityEngine;
 using Zenject;
 
