@@ -22,7 +22,7 @@ A well-structured Unity project demonstrating advanced architectural patterns an
 ├── UI/                # User interface elements and controllers
 ├── StateMachine/      # State management system
 ├── Extensions/        # Extension methods and utilities
-└── Tests/             # Unit and integration tests
+├── Tests/             # Unit and integration tests
 └── InitData/          # Configuration for game modules deu to scriptable objects
 ```
 
