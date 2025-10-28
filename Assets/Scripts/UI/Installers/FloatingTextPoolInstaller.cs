@@ -4,8 +4,11 @@ using Zenject;
 
 namespace UI.Installers
 {
-    public class FloatingTextPoolInstaller : MonoInstaller
+    [CreateAssetMenu(menuName = "Installers/FloatingTextPoolInstaller")]
+    public class FloatingTextPoolInstaller : ScriptableObjectInstaller<FloatingTextPoolInstaller>
     {
+        [SerializeField]
+        private ScriptableObject _scriptableObject;
         [SerializeField]
         private FloatingText _prefab;
         [SerializeField]
@@ -15,6 +18,8 @@ namespace UI.Installers
 
         public override void InstallBindings()
         {
+            Container.QueueForInject(_scriptableObject);
+
             Container
                    .BindFactory<string, Vector3, FloatingText, FloatingText.Factory>()                   
                        .FromMonoPoolableMemoryPool(

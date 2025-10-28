@@ -35,6 +35,7 @@ namespace UI
             _pool = pool;
 
             _text.text = message;
+            transform.position = position;
             transform.localScale = Vector3.one * _startScale;
 
             _sequence = DOTween.Sequence();
