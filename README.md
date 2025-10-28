@@ -8,7 +8,7 @@ A well-structured Unity project demonstrating advanced architectural patterns an
 - **MVP Pattern Implementation**: Clear separation of concerns between Models, Views, and Presenters
 - **State Machine Pattern**: Robust state management system for handling different animal states and behaviors
 - **Dependency Injection**: Utilizing Zenject framework for clean and maintainable dependency management
-- **Modular Design**: Clear project structure with separate modules for Animals, UI, StateMachine, and Extensions
+- **Modular Design**: Clear project structure with separate modules by asmdef for Animals, UI, StateMachine, and Extensions
 
 ### 2. Technical Implementation
 - **Unity Animation System**: Integration with Unity's animation system for smooth animal movements and behaviors
