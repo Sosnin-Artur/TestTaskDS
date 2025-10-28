@@ -49,7 +49,7 @@ A well-structured Unity project demonstrating advanced architectural patterns an
 - Zenject 
 - DOTween
 - NUnit
-- Unity Input System
+- NSubstitude
 - UniTask
 - R3
 
