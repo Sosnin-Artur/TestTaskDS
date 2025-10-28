@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 9160128543533833497}
   - component: {fileID: 4657886830095017530}
   - component: {fileID: 7897531002649716837}
-  - component: {fileID: 2746467348706049673}
   - component: {fileID: 7598684778244898739}
   m_Layer: 0
   m_Name: Animal
@@ -138,19 +137,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
---- !u!114 &2746467348706049673
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1150926813618556335}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 47d4d14d6c624b7b9f3b34744b08bb61, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _rigidbody: {fileID: 7897531002649716837}
 --- !u!114 &7598684778244898739
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -164,3 +150,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _stateMachine: {fileID: 11400000, guid: 5fc4b3b51828e0a4fac4aee00ff86363, type: 2}
+  _currentState: {fileID: 0}
